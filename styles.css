@@ -1,0 +1,88 @@
+body,html {
+  margin: 0 2vw 0 2vw;
+  height: 100%;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "s c e"
+                       "s g f";
+  grid-column-gap: 10px;
+  background-color: #001f3f;
+}
+
+.title {
+  color: aliceblue;
+  font-size: 2.2em;
+  font-family: fantasy;
+  position: fixed;
+  top: 40px;
+  left: calc(100% - 36% - 25%);
+}
+
+.cookies,
+.shop,
+.grandma,
+.facility {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 13px -1px rgba(168, 168, 168, 0.75);
+  color: #001f3f;
+  background-color: hsla(210, 100%, 75%, 1.0);
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 13px 0px rgba(0, 0, 0, 0.75);
+  border: none;
+  font-size: .7em;
+  background-color: rgba(3, 31, 63, 0.9);
+  color: aliceblue;
+}
+
+button:hover {
+  opacity: 0.8;
+  padding: 12px!important;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.cookies {
+  grid-area: c;
+  align-self: flex-end;
+}
+
+.shop {
+  grid-area: s;
+  align-self: center;
+}
+
+.grandma {
+  grid-area: g;
+  align-self: center;
+}
+
+.facility {
+  grid-area: f;
+  align-self: center;
+}
+
+.empty {
+  grid-area: d; 
+}
+
+.empty2 {
+  grid-area: d; 
+}
